@@ -9,4 +9,9 @@
 		// realiza a exclusao do produto
 		echo "Produto excluído";
 	}
+        
+        if (strcmp ($operacao, "atualizar") == 0 ) {
+            // realiza a atualização do produto
+            echo "Produto atualizado";
+        }
 ?>

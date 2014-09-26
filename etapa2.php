@@ -8,7 +8,14 @@
 			Cadastramento - Etapa 2 de 3
 	</strong></big></big></p> 
 	<form method="POST" action="etapa3.php"> 
- 		<input type="hidden" name="nome" value="<?php echo $nome; ?>"> 
+ 		<?php 
+                    $nome      = $_POST["nome"];
+                    $email     = $_POST["email"];
+                    $datanascimento  = $_POST["datanascimento"];
+                    $sexo      = $_POST["sexo"];
+                    $profissao = $_POST["profissao"];
+                ?>
+                <input type="hidden" name="nome" value="<?php echo $nome; ?>"> 
  		<input type="hidden" name="email" value="<?php echo $email; ?>"> 
  		<input type="hidden" name="datanascimento" value="<?php echo $datanascimento; ?>"> 
  		<input type="hidden" name="sexo" value="<?php echo $sexo; ?>"> 
