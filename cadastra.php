@@ -1,45 +1,33 @@
+<!DOCTYPE html>
 <html>
-<head> 
+    <head> 
 	<title>Desenvolvendo Websites com PHP</title> 
 	<meta charset="UTF-8">
-</head>
-<body> 
-<?php
-    $nome      = $_POST["nome"];
-    $email     = $_POST["email"];
-    $datanasc  = $_POST["datanascimento"];
-    $sexo      = $_POST["sexo"];
-    $profissao = $_POST["profissao"];
-    
-    $telefone  = $_POST["telefone"];
-    $endereco  = $_POST["endereco"];
-    $cidade    = $_POST["cidade"];
-    $estado    = $_POST["estado"];
-    $cep       = $_POST["cep"];
-    $username  = $_POST["username"];
-    $senha     = $_POST["senha"];
-    $csenha    = $_POST["confirma_senha"];
-
-
-    	
-    echo "Voce está cadastrado. Seus dados registrado:";
-    echo "Nome: ".$nome ;
-    echo "E-mail: ".$email ;
-    echo "Data de Nascimento: ".$datanasc ;
-    echo "Sexo: ".$sexo ;
-    echo "Profissão: ".$profissao;
-    echo "Telefone: ".$telefone ;
-    echo "Endereço: ".$endereco ;
-    echo "Cidade: ".$cidade;
-    echo "Estado: ".$estado ;
-    echo "CEP: ".$cep ;
-    echo "Username: ".$username;
-    echo "Senha: ".$senha;
-    echo "Confirma Senha: ".$csenha;
-     
-		
-
-?>
-
-</body> 
+    </head>
+    <body> 
+        <form method="POST" action="cadastro.php" >
+              
+            <h3> Confira seus dados e finalize o processo de cadastramento </h3>
+                   
+            <?php
+                echo "<br>";
+                echo "Verifique seu cadastro:";
+                echo "<br>";
+                echo "Nome: ".$_POST['nome']."<br/>";
+                echo "Email: ".$_POST['email']."<br/>";
+                echo "Data de nascimento: ".$_POST ['datanascimento']." (aaaa/mm/dd) <br/>";
+                echo "Sexo: ".$_POST['sexo']."<br/>";
+                echo "Profissão: ".$_POST['profissao']."<br/>";
+                echo "Telefone: ".$_POST['telefone']."<br/>";
+                echo "Endereço: ".$_POST['endereco']."<br/>";
+                echo "Cidade: ".$_POST['cidade']."<br/>"; 
+                echo "Estado: ".$_POST['estado']."<br/>";
+                echo "CEP: ".$_POST['cep']."<br/>";
+                echo "Username: ".$_POST['username']."<br/>";
+                echo "<br>";
+            ?>
+            <br/>
+            <?php include 'cadastro.php'; ?>
+        </form>    
+    </body> 
 </html>
